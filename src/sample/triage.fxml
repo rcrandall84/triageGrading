@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="mainPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: blue;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.TriageController">
+    <AnchorPane fx:id="welcomePane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: blue;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1">
+       <children>
+          <Label layoutX="153.0" layoutY="115.0" prefHeight="170.0" prefWidth="295.0" style="-fx-background-color: white;" text="Welcome to Triage" textAlignment="CENTER" wrapText="true">
+             <font>
+                <Font size="48.0" />
+             </font>
+          </Label>
+          <Label fx:id="welcomeButton" layoutX="450.0" layoutY="330.0" onMouseClicked="#welcomeNextPane" style="-fx-background-color: Green; -fx-text-fill: yellow;" text="Continue" textAlignment="CENTER">
+             <font>
+               <Font size="24.0" />
+             </font>
+          </Label>
+       </children>
+    </AnchorPane>
+   <AnchorPane fx:id="introPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: blue;" visible="false">
+      <children>
+         <Label layoutX="130.0" layoutY="101.0" prefHeight="198.0" prefWidth="341.0" style="-fx-background-color: white;" text="Triage grading is a system that determines your grade on an assignment based on how complete you do each assignment." textAlignment="CENTER" wrapText="true">
+            <font>
+               <Font size="18.0" />
+            </font>
+         </Label>
+         <Label fx:id="introButton" layoutX="450.0" layoutY="330.0" onMouseClicked="#introNextPane" style="-fx-background-color: Green; -fx-text-fill: yellow;" text="Continue" textAlignment="CENTER">
+            <font>
+               <Font size="24.0" />
+            </font>
+         </Label>
+      </children>
+   </AnchorPane>
+   <AnchorPane fx:id="scalePane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: blue;" visible="false">
+      <children>
+         <Label alignment="CENTER" layoutX="130.0" layoutY="79.0" prefHeight="69.0" prefWidth="341.0" style="-fx-background-color: white;" text="Your grade for each assignment is based on a scale from 0 to 3 points." textAlignment="CENTER" wrapText="true">
+            <font>
+               <Font size="18.0" />
+            </font>
+         </Label>
+         <Label fx:id="scaleButton" layoutX="450.0" layoutY="330.0" onMouseClicked="#scaleNextPane" style="-fx-background-color: Green; -fx-text-fill: yellow;" text="Continue" textAlignment="CENTER">
+            <font>
+               <Font size="24.0" />
+            </font>
+         </Label>
+         <Label layoutX="130.0" layoutY="160.0" prefHeight="148.0" prefWidth="341.0" style="-fx-background-color: white;" text="0: Did not turn in the assignment.&#10;1: Turned in the assignment but did not answer question.&#10;2: Turned in the assignment but did not answer all parts of the question.&#10;3: Correctly answered all parts of the assignment." wrapText="true" />
+      </children>
+   </AnchorPane>
+    <AnchorPane fx:id="finalGradePane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: blue;" visible="false">
+        <children>
+            <Label alignment="CENTER" layoutX="232.0" layoutY="78.0" prefHeight="229.0" prefWidth="341.0" style="-fx-background-color: white;" text="Your final grade for the class is determined using the scale to the left, where &quot;T&quot; is the total number of points possible in the class." textAlignment="CENTER" wrapText="true">
+                <font>
+                    <Font size="18.0" />
+                </font>
+            </Label>
+            <Label fx:id="finalGradeButton" layoutX="450.0" layoutY="330.0" onMouseClicked="#finalGradeNextPane" style="-fx-background-color: Green; -fx-text-fill: yellow;" text="Continue" textAlignment="CENTER">
+                <font>
+                    <Font size="24.0" />
+                </font>
+            </Label>
+         <ImageView fitHeight="229.0" fitWidth="213.0" layoutX="14.0" layoutY="78.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+               <Image url="@../gradeScale.png" />
+            </image>
+         </ImageView>
+        </children>
+    </AnchorPane>
+    <AnchorPane fx:id="exampleIntroPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: blue;" visible="false">
+        <children>
+            <Label alignment="CENTER" layoutX="130.0" layoutY="79.0" prefHeight="198.0" prefWidth="341.0" style="-fx-background-color: white;" text="Example:&#10;Billy is asked to answer the question:&#10;&#10;What is 1+1 and what color is the sky?" wrapText="true">
+                <font>
+                    <Font size="18.0" />
+                </font>
+            </Label>
+            <Label fx:id="exampleIntroButton" layoutX="450.0" layoutY="330.0" onMouseClicked="#exampleIntroNextPane" style="-fx-background-color: Green; -fx-text-fill: yellow;" text="Continue" textAlignment="CENTER">
+                <font>
+                    <Font size="24.0" />
+                </font>
+            </Label>
+        </children>
+    </AnchorPane>
+    <AnchorPane fx:id="exampleIntroContPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: blue;" visible="false">
+        <children>
+            <Label alignment="CENTER" layoutX="130.0" layoutY="79.0" prefHeight="198.0" prefWidth="341.0" style="-fx-background-color: white;" text="Example:&#10;Billy can do 4 different things that will result in a score ranging from 0 to 3." wrapText="true">
+                <font>
+                    <Font size="18.0" />
+                </font>
+            </Label>
+            <Label fx:id="exampleIntroContButton" layoutX="450.0" layoutY="330.0" onMouseClicked="#exampleIntroContNextPane" style="-fx-background-color: Green; -fx-text-fill: yellow;" text="Continue" textAlignment="CENTER">
+                <font>
+                    <Font size="24.0" />
+                </font>
+            </Label>
+        </children>
+    </AnchorPane>
+    <AnchorPane fx:id="exampleZeroPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: blue;" visible="false">
+        <children>
+            <Label alignment="CENTER" layoutX="153.0" layoutY="56.0" prefHeight="90.0" prefWidth="295.0" style="-fx-background-color: white;" text="Example:&#10;Billy is asked to answer the question:&#10;&#10;What is 1+1 and what color is the sky?" wrapText="true">
+                <font>
+                    <Font size="14.0" />
+                </font>
+            </Label>
+            <Label fx:id="exampleZeroButton" layoutX="450.0" layoutY="330.0" onMouseClicked="#exampleZeroNextPane" style="-fx-background-color: Green; -fx-text-fill: yellow;" text="Continue" textAlignment="CENTER">
+                <font>
+                    <Font size="24.0" />
+                </font>
+            </Label>
+            <Label layoutX="98.0" layoutY="170.0" prefHeight="148.0" prefWidth="405.0" style="-fx-background-color: white;" text="Billy could refuse to do the assignment and not turn it in.&#10;&#10;This will result in Billy receiving a score of 0, since he did not turn in the assignment." textAlignment="CENTER" wrapText="true">
+                <font>
+                    <Font size="18.0" />
+                </font>
+            </Label>
+        </children>
+    </AnchorPane>
+    <AnchorPane fx:id="exampleOnePane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: blue;" visible="false">
+        <children>
+            <Label alignment="CENTER" layoutX="153.0" layoutY="56.0" prefHeight="90.0" prefWidth="295.0" style="-fx-background-color: white;" text="Example:&#10;Billy is asked to answer the question:&#10;&#10;What is 1+1 and what color is the sky?" wrapText="true">
+                <font>
+                    <Font size="14.0" />
+                </font>
+            </Label>
+            <Label fx:id="exampleOneButton" layoutX="450.0" layoutY="330.0" onMouseClicked="#exampleOneNextPane" style="-fx-background-color: Green; -fx-text-fill: yellow;" text="Continue" textAlignment="CENTER">
+                <font>
+                    <Font size="24.0" />
+                </font>
+            </Label>
+            <Label layoutX="62.0" layoutY="154.0" prefHeight="162.0" prefWidth="477.0" style="-fx-background-color: white;" text="Billy could turn in the assignment but answers the question:&#10;1+1=3 and the sky is purple with poka dots.&#10;&#10;This will result in Billy receiving a score of 1, since he turned in the assignment but his answer was completely incorrect." textAlignment="CENTER" wrapText="true">
+                <font>
+                    <Font size="18.0" />
+                </font>
+            </Label>
+        </children>
+    </AnchorPane>
+    <AnchorPane fx:id="exampleTwoPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: blue;" visible="false">
+        <children>
+            <Label alignment="CENTER" layoutX="153.0" layoutY="56.0" prefHeight="90.0" prefWidth="295.0" style="-fx-background-color: white;" text="Example:&#10;Billy is asked to answer the question:&#10;&#10;What is 1+1 and what color is the sky?" wrapText="true">
+                <font>
+                    <Font size="14.0" />
+                </font>
+            </Label>
+            <Label fx:id="exampleTwoButton" layoutX="450.0" layoutY="330.0" onMouseClicked="#exampleTwoNextPane" style="-fx-background-color: Green; -fx-text-fill: yellow;" text="Continue" textAlignment="CENTER">
+                <font>
+                    <Font size="24.0" />
+                </font>
+            </Label>
+            <Label layoutX="51.0" layoutY="158.0" prefHeight="148.0" prefWidth="499.0" style="-fx-background-color: white;" text="Billy could turn in the assignment but answer the question:&#10;The sky is blue.&#10;&#10;This will result in Billy receiving a score of 2, since he turned in the assignment but only answered part of the question." textAlignment="CENTER" wrapText="true">
+                <font>
+                    <Font size="18.0" />
+                </font>
+            </Label>
+        </children>
+    </AnchorPane>
+    <AnchorPane fx:id="exampleThreePane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: blue;" visible="false">
+        <children>
+            <Label alignment="CENTER" layoutX="153.0" layoutY="56.0" prefHeight="90.0" prefWidth="295.0" style="-fx-background-color: white;" text="Example:&#10;Billy is asked to answer the question:&#10;&#10;What is 1+1 and what color is the sky?" wrapText="true">
+                <font>
+                    <Font size="14.0" />
+                </font>
+            </Label>
+            <Label fx:id="exampleThreeButton" layoutX="450.0" layoutY="330.0" onMouseClicked="#exampleThreeNextPane" style="-fx-background-color: Green; -fx-text-fill: yellow;" text="Continue" textAlignment="CENTER">
+                <font>
+                    <Font size="24.0" />
+                </font>
+            </Label>
+            <Label layoutX="44.0" layoutY="160.0" prefHeight="155.0" prefWidth="513.0" style="-fx-background-color: white;" text="Billy could turn in the assignment and answer the question:&#10;1+1=2 and the sky is blue.&#10;&#10;This will result in Billy receiving a score of 3, since he turned in the assignment and correctly answered all parts of the question." textAlignment="CENTER" wrapText="true">
+                <font>
+                    <Font size="18.0" />
+                </font>
+            </Label>
+        </children>
+    </AnchorPane>
+    <AnchorPane fx:id="testPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: blue;" visible="false" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1">
+        <children>
+            <Label layoutX="121.0" layoutY="115.0" prefHeight="170.0" prefWidth="358.0" style="-fx-background-color: white;" text="Test Your Understanding!!!" textAlignment="CENTER" wrapText="true">
+                <font>
+                    <Font size="48.0" />
+                </font>
+            </Label>
+            <Label fx:id="testButton" layoutX="450.0" layoutY="330.0" onMouseClicked="#testNextPane" style="-fx-background-color: Green; -fx-text-fill: yellow;" text="Continue" textAlignment="CENTER">
+                <font>
+                    <Font size="24.0" />
+                </font>
+            </Label>
+        </children>
+    </AnchorPane>
+    <AnchorPane fx:id="questionOnePane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: blue;" visible="false">
+        <children>
+            <Label alignment="CENTER" layoutX="25.0" layoutY="39.0" prefHeight="140.0" prefWidth="550.0" style="-fx-background-color: white;" text="Question 1:&#10;Billy is asked to answer:&#10;What is 2+2 and what shape is this: ▲?&#10;&#10;Billy did not do the assignment. What is his score?" wrapText="true">
+                <font>
+                    <Font size="18.0" />
+                </font>
+            </Label>
+            <Label fx:id="questionOneButton" layoutX="450.0" layoutY="330.0" onMouseClicked="#questionOneAnswer" style="-fx-background-color: Green; -fx-text-fill: yellow;" text="Answer" textAlignment="CENTER">
+                <font>
+                    <Font size="24.0" />
+                </font>
+            </Label>
+         <RadioButton fx:id="questionOneAnswerA" layoutX="102.0" layoutY="224.0" mnemonicParsing="false" style="-fx-background-color: white;" text="A: 0">
+            <toggleGroup>
+               <ToggleGroup fx:id="questionOne" />
+            </toggleGroup>
+         </RadioButton>
+         <RadioButton fx:id="questionOneAnswerB" layoutX="389.0" layoutY="224.0" mnemonicParsing="false" style="-fx-background-color: white;" text="B: 1" toggleGroup="$questionOne" />
+         <RadioButton fx:id="questionOneAnswerC" layoutX="102.0" layoutY="278.0" mnemonicParsing="false" style="-fx-background-color: white;" text="C: 2" toggleGroup="$questionOne" />
+         <RadioButton fx:id="questionOneAnswerD" layoutX="389.0" layoutY="278.0" mnemonicParsing="false" style="-fx-background-color: white;" text="D: 3" toggleGroup="$questionOne" />
+        </children>
+    </AnchorPane>
+    <AnchorPane fx:id="questionTwoPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: blue;" visible="false">
+        <children>
+            <Label alignment="CENTER" layoutX="25.0" layoutY="39.0" prefHeight="162.0" prefWidth="550.0" style="-fx-background-color: white;" text="Question 2:&#10;Billy is asked to answer:&#10;What is 2+2 and what shape is this: ▲?&#10;&#10;Billy turned in the assignment answered:&#10;2+2=4. What is his score?" wrapText="true">
+                <font>
+                    <Font size="18.0" />
+                </font>
+            </Label>
+            <Label fx:id="questionTwoButton" layoutX="450.0" layoutY="330.0" onMouseClicked="#questionTwoAnswer" style="-fx-background-color: Green; -fx-text-fill: yellow;" text="Answer" textAlignment="CENTER">
+                <font>
+                    <Font size="24.0" />
+                </font>
+            </Label>
+            <RadioButton fx:id="questionTwoAnswerA" layoutX="102.0" layoutY="224.0" mnemonicParsing="false" style="-fx-background-color: white;" text="A: 0">
+                <toggleGroup>
+                    <ToggleGroup fx:id="questionTwo" />
+                </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="questionTwoAnswerB" layoutX="389.0" layoutY="224.0" mnemonicParsing="false" style="-fx-background-color: white;" text="B: 1" toggleGroup="$questionTwo" />
+            <RadioButton fx:id="questionTwoAnswerC" layoutX="102.0" layoutY="278.0" mnemonicParsing="false" style="-fx-background-color: white;" text="C: 2" toggleGroup="$questionTwo" />
+            <RadioButton fx:id="questionTwoAnswerD" layoutX="389.0" layoutY="278.0" mnemonicParsing="false" style="-fx-background-color: white;" text="D: 3" toggleGroup="$questionTwo" />
+        </children>
+    </AnchorPane>
+    <AnchorPane fx:id="questionThreePane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: blue;" visible="false">
+        <children>
+            <Label alignment="CENTER" layoutX="34.0" layoutY="39.0" prefHeight="162.0" prefWidth="550.0" style="-fx-background-color: white;" text="Question 3:&#10;Billy is asked to answer:&#10;What is 2+2 and what shape is this: ▲?&#10;&#10;Billy turned in the assignment and answered:&#10;2+2=4 and the shape is a triangle. What is his score?" wrapText="true">
+                <font>
+                    <Font size="18.0" />
+                </font>
+            </Label>
+            <Label fx:id="questionThreeButton" layoutX="450.0" layoutY="330.0" onMouseClicked="#questionThreeAnswer" style="-fx-background-color: Green; -fx-text-fill: yellow;" text="Answer" textAlignment="CENTER">
+                <font>
+                    <Font size="24.0" />
+                </font>
+            </Label>
+            <RadioButton fx:id="questionThreeAnswerA" layoutX="102.0" layoutY="224.0" mnemonicParsing="false" style="-fx-background-color: white;" text="A: 0">
+                <toggleGroup>
+                    <ToggleGroup fx:id="questionThree" />
+                </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="questionThreeAnswerB" layoutX="389.0" layoutY="224.0" mnemonicParsing="false" style="-fx-background-color: white;" text="B: 1" toggleGroup="$questionThree" />
+            <RadioButton fx:id="questionThreeAnswerC" layoutX="102.0" layoutY="278.0" mnemonicParsing="false" style="-fx-background-color: white;" text="C: 2" toggleGroup="$questionThree" />
+            <RadioButton fx:id="questionThreeAnswerD" layoutX="389.0" layoutY="278.0" mnemonicParsing="false" style="-fx-background-color: white;" text="D: 3" toggleGroup="$questionThree" />
+        </children>
+    </AnchorPane>
+    <AnchorPane fx:id="correctAnswerPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: blue;" visible="false" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1">
+        <children>
+            <Label layoutX="153.0" layoutY="115.0" prefHeight="170.0" prefWidth="295.0" style="-fx-background-color: Green;" text="That is Correct!!!" textAlignment="CENTER" wrapText="true">
+                <font>
+                    <Font size="48.0" />
+                </font>
+            </Label>
+            <Label fx:id="correctButton" layoutX="450.0" layoutY="330.0" onMouseClicked="#answerNextPane" style="-fx-background-color: Green; -fx-text-fill: yellow;" text="Continue" textAlignment="CENTER">
+                <font>
+                    <Font size="24.0" />
+                </font>
+            </Label>
+        </children>
+    </AnchorPane>
+    <AnchorPane fx:id="incorrectAnswerPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: blue;" visible="false">
+        <children>
+            <Label alignment="CENTER" layoutX="130.0" layoutY="74.0" prefHeight="69.0" prefWidth="341.0" style="-fx-background-color: red;" text="That is Incorrect!!!" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+                <font>
+                    <Font size="36.0" />
+                </font>
+            </Label>
+            <Label fx:id="incorrectButton" layoutX="450.0" layoutY="330.0" onMouseClicked="#answerNextPane" style="-fx-background-color: Green; -fx-text-fill: yellow;" text="Continue" textAlignment="CENTER">
+                <font>
+                    <Font size="24.0" />
+                </font>
+            </Label>
+            <Label fx:id="questionOneExplanation" layoutX="130.0" layoutY="160.0" prefHeight="148.0" prefWidth="341.0" style="-fx-background-color: white;" text="Billy did not turn in his assignment, as a result he received 0 points for the assignment." textAlignment="CENTER" visible="false" wrapText="true" />
+         <Label fx:id="questionTwoExplanation" layoutX="130.0" layoutY="160.0" prefHeight="148.0" prefWidth="341.0" style="-fx-background-color: white;" text="Even though Billy turned in his assignment he only answered part of the question correctly. As a result he only got 2 out of 3 points." textAlignment="CENTER" visible="false" wrapText="true" />
+         <Label fx:id="questionThreeExplanation" layoutX="130.0" layoutY="160.0" prefHeight="148.0" prefWidth="341.0" style="-fx-background-color: white;" text="Billy turned in the assignment and answered all parts correctly. As a result he got 3 points on the assignment." textAlignment="CENTER" visible="false" wrapText="true" />
+        </children>
+    </AnchorPane>
+    <AnchorPane fx:id="lastPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: blue;" visible="false" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1">
+        <children>
+            <Label fx:id="correctLabel" layoutX="153.0" layoutY="115.0" prefHeight="170.0" prefWidth="295.0" style="-fx-background-color: white;" text="You got 0 out of 3 correct!!!" textAlignment="CENTER" wrapText="true">
+                <font>
+                    <Font size="48.0" />
+                </font>
+            </Label>
+            <Label fx:id="tryAgainButton" layoutX="450.0" layoutY="330.0" onMouseClicked="#retryTest" style="-fx-background-color: Green; -fx-text-fill: yellow;" text="Try Again" textAlignment="CENTER">
+                <font>
+                    <Font size="24.0" />
+                </font>
+            </Label>
+        </children>
+    </AnchorPane>
+</AnchorPane>
